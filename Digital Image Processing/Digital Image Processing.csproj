@@ -66,10 +66,19 @@
       <DependentUpon>fromMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Histogram.cs" />
+    <Compile Include="frmHistogramGray.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistogramGray.Designer.cs">
+      <DependentUpon>frmHistogramGray.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmHistogram.resx">
       <DependentUpon>frmHistogram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHistogramGray.resx">
+      <DependentUpon>frmHistogramGray.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fromMain.resx">
       <DependentUpon>fromMain.cs</DependentUpon>

@@ -56,10 +56,35 @@ namespace Digital_Image_Processing
 
         private void viewHistogramsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Bitmap bmp = new Bitmap(pictureBox1.Image);
+            int length = bmp.Width < bmp.Height ? bmp.Width : bmp.Height;
+            bool is_gray = true;
+            Color bmp_color = new Color();
+
+            for (int i = 0; i < length; i++)
+            {
+                bmp_color = bmp.GetPixel(i, i);
+                if (bmp_color.R == bmp_color.G && bmp_color.R == bmp_color.B)
+                    continue;
+                else
+                {
+                    is_gray = false;
+                    break;
+                }
+            }
+            
+
             if (flag)
             {
-                frmHistogram f = new frmHistogram(new Bitmap(pictureBox1.Image));
-                f.ShowDialog();
+                if (is_gray) {
+                    frmHistogramGray f = new frmHistogramGray(bmp);
+                    f.ShowDialog();
+                }
+                else
+                {
+                    frmHistogram f = new frmHistogram(bmp);
+                    f.ShowDialog();
+                }
             }
             else
             {

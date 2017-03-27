@@ -30,8 +30,6 @@ namespace Digital_Image_Processing
         }
 
         private void CountLevel() {
-            
-
             //Đếm số mức xám
             for (int x = 0; x < width; x++)
             {
