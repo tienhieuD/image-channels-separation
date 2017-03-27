@@ -13,20 +13,20 @@ namespace Digital_Image_Processing
         //private const int WIDTH = 261;
         //private const int HEIGHT = 261;
 
-        int[,] a;
+        int[,] arr;
         int[] value_count = new int[256];
         int width, height;
 
         public Histogram(int[,] array)
         {
-            this.a = array;
+            this.arr = array;
 
             for (int k = 0; k < value_count.Length; k++)
             {
                 value_count[k] = 0;
             }
-            width = a.GetLength(0);
-            height = a.GetLength(1);
+            width = arr.GetLength(0);
+            height = arr.GetLength(1);
         }
 
         private void CountLevel() {
@@ -35,7 +35,7 @@ namespace Digital_Image_Processing
             {
                 for (int y = 0; y < height; y++)
                 {
-                    int k = a[x, y];
+                    int k = arr[x, y];
                     value_count[k]++;
                 }
             }
@@ -64,6 +64,11 @@ namespace Digital_Image_Processing
                 e.Graphics.DrawLine(pen, p1, p2);
             }
             
+        }
+
+        internal int[,] Balance()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -64,5 +64,23 @@ namespace Digital_Image_Processing
             }
             return arr;
         }
+
+        private int[,,] Balance()
+        {
+            Histogram his_red = new Histogram(GetRedArray());
+            Histogram his_gre = new Histogram(GetGreenArray());
+            Histogram his_blu = new Histogram(GetBlueArray());
+
+            his_red.Balance();
+            his_gre.Balance();
+            his_blu.Balance();
+
+            throw new NotImplementedException();
+        }
+
+        internal Bitmap ToBitmap()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

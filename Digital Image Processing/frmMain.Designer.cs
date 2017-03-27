@@ -1,6 +1,6 @@
 ﻿namespace Digital_Image_Processing
 {
-    partial class fromMain
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fromMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewHistogramsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.balanceHistogramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,30 +59,53 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openImageToolStripMenuItem,
             this.saveAsToolStripMenuItem,
-            this.viewHistogramsToolStripMenuItem});
+            this.viewHistogramsToolStripMenuItem,
+            this.balanceHistogramToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(162, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(246, 136);
             // 
             // openImageToolStripMenuItem
             // 
             this.openImageToolStripMenuItem.Name = "openImageToolStripMenuItem";
-            this.openImageToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.openImageToolStripMenuItem.Text = "Open";
+            this.openImageToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openImageToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
+            this.openImageToolStripMenuItem.Text = "&Open";
             this.openImageToolStripMenuItem.Click += new System.EventHandler(this.openImageToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.saveAsToolStripMenuItem.Text = "Save as...";
+            this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
+            this.saveAsToolStripMenuItem.Text = "&Save as...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // viewHistogramsToolStripMenuItem
             // 
             this.viewHistogramsToolStripMenuItem.Name = "viewHistogramsToolStripMenuItem";
-            this.viewHistogramsToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.viewHistogramsToolStripMenuItem.Text = "View histograms";
+            this.viewHistogramsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.V)));
+            this.viewHistogramsToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
+            this.viewHistogramsToolStripMenuItem.Text = "&View histogram";
             this.viewHistogramsToolStripMenuItem.Click += new System.EventHandler(this.viewHistogramsToolStripMenuItem_Click);
+            // 
+            // balanceHistogramToolStripMenuItem
+            // 
+            this.balanceHistogramToolStripMenuItem.Name = "balanceHistogramToolStripMenuItem";
+            this.balanceHistogramToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.B)));
+            this.balanceHistogramToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
+            this.balanceHistogramToolStripMenuItem.Text = "&Balance histogram";
+            this.balanceHistogramToolStripMenuItem.Click += new System.EventHandler(this.balanceHistogramToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // fromMain
             // 
@@ -104,6 +129,8 @@
         private System.Windows.Forms.ToolStripMenuItem openImageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewHistogramsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem balanceHistogramToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

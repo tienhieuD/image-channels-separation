@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 namespace Digital_Image_Processing
 {
-    public partial class fromMain : DevExpress.XtraEditors.XtraForm
+    public partial class frmMain : DevExpress.XtraEditors.XtraForm
     {
         private bool flag = false;
 
-        public fromMain()
+        public frmMain()
         {
             InitializeComponent();
         }
@@ -79,6 +79,9 @@ namespace Digital_Image_Processing
                 if (is_gray) {
                     frmHistogramGray f = new frmHistogramGray(bmp);
                     f.ShowDialog();
+
+                    //frmHistogram f2 = new frmHistogram(bmp);
+                    //f2.ShowDialog();
                 }
                 else
                 {
@@ -90,6 +93,23 @@ namespace Digital_Image_Processing
             {
                 MessageBox.Show("No image available.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult want_exit = MessageBox.Show("Do you want to exit program.", "  Exit?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (want_exit == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void balanceHistogramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Bitmap bmp = new Bitmap(pictureBox1.Image);
+            //ArrayImage arr_img = new ArrayImage(bmp);
+            //Bitmap new_bmp = arr_img.ToBitmap();
         }
     }
 }
