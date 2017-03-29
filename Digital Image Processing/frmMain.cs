@@ -12,6 +12,7 @@ namespace Digital_Image_Processing
     public partial class frmMain : DevExpress.XtraEditors.XtraForm
     {
         private bool flag = false;
+        ArrayImage imgxx;
 
         public frmMain()
         {
@@ -35,6 +36,7 @@ namespace Digital_Image_Processing
                 pictureBox1.Image = openImg;
                 flag = true;
                 this.Text = string.Format("Digital Image Processing ({0})", open.FileName);
+                //imgxx = new ArrayImage(new Bitmap(pictureBox1.Image));
             }
         }
 
@@ -111,5 +113,16 @@ namespace Digital_Image_Processing
             //ArrayImage arr_img = new ArrayImage(bmp);
             //Bitmap new_bmp = arr_img.ToBitmap();
         }
+        
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            //if (flag)
+            //{
+            //    label1.Text = string.Format("({0}, {1})", e.X-pictureBox1.Width/2, e.Y-pictureBox1.Height/2);
+            //    label3.Text = imgxx.getRGB(e.X, e.Y);
+            //}
+            
+        }
+
     }
 }

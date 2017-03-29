@@ -13,7 +13,7 @@ namespace Digital_Image_Processing
 {
     public partial class frmHistogramGray : DevExpress.XtraEditors.XtraForm
     {
-        Pen black_pen = new Pen(Color.Gray, 1);
+        Pen black_pen = new Pen(Color.Silver, 1);
         Bitmap image;
         ArrayImage array_image;
 

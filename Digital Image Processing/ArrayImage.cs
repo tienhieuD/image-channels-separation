@@ -26,6 +26,14 @@ namespace Digital_Image_Processing
             }
         }
 
+        public string getRGB(int x, int y)
+        {
+            if (x >= width || x < 0) return "";
+            if (y >= height || y < 0) return "";
+            string m = string.Format("RGB({0},{1},{2})", array_image[x, y, 0], array_image[x, y, 1], array_image[x, y, 2]);
+            return m;
+        }
+
         internal int[,] GetRedArray()
         {
             int[,] arr = new int[width, height];
